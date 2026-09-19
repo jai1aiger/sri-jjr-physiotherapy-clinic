@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sri J.J.R. Physiotherapy Clinic - Dr. S. Gayathri, BPT MPT (Ortho). Marripalem, Visakhapatnam.">
+<title>Home | Sri J.J.R. Physiotherapy Clinic</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<style>
+:root{
+  --navy:#0A1628;--dark:#112240;--card:#1A2F4E;
+  --teal:#00BFA5;--tg:#00E5CC;--gold:#FFD700;
+  --white:#fff;--silver:#A8B2C1;
+  --fh:"Playfair Display",serif;--fb:"Poppins",sans-serif;
+  --r:16px;--t:.3s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--navy);color:var(--white);min-height:100vh;overflow-x:hidden}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px}
+
+/* ── NAVBAR ── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.85rem 2rem;
+  background:rgba(10,22,40,.95);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(0,191,165,.2);transition:var(--t)}
+.navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.5)}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.logo-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--teal),var(--tg));
+  border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.cn{font-family:var(--fh);font-size:.95rem;color:var(--white);line-height:1.2}
+.ct{font-size:.62rem;color:var(--teal);font-weight:500}
+.nav-links{display:flex;list-style:none;gap:.15rem}
+.nav-links a{color:var(--silver);text-decoration:none;font-size:.83rem;font-weight:500;
+  padding:.45rem .7rem;border-radius:8px;transition:var(--t);white-space:nowrap}
+.nav-links a:hover{color:var(--teal);background:rgba(0,191,165,.1)}
+.nav-links a.active{color:var(--teal);background:rgba(0,191,165,.12);font-weight:700}
+.btn-call{background:linear-gradient(135deg,var(--teal),var(--tg));color:var(--navy);
+  font-weight:700;padding:.5rem 1.1rem;border-radius:25px;text-decoration:none;
+  font-size:.82rem;white-space:nowrap;transition:var(--t);display:flex;align-items:center;gap:.4rem}
+.btn-call:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,191,165,.4)}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hbg span{width:24px;height:2px;background:var(--teal);border-radius:2px;transition:var(--t)}
+
+/* ── PAGE WRAPPER ── */
+.page-wrap{padding-top:72px;min-height:100vh;display:flex;flex-direction:column}
+.page-content{flex:1}
+
+/* ── COMMON ── */
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.stag{display:inline-block;background:rgba(0,191,165,.12);border:1px solid rgba(0,191,165,.3);
+  color:var(--teal);font-size:.73rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:.28rem .9rem;border-radius:20px;margin-bottom:.9rem}
+.stit{font-family:var(--fh);font-size:clamp(1.7rem,3.5vw,2.6rem);line-height:1.25;margin-bottom:.85rem}
+.sdsc{color:var(--silver);font-size:.97rem;line-height:1.75;max-width:600px}
+.tc{text-align:center}.tc .sdsc{margin:0 auto}
+.tl{color:var(--teal)}.gd{color:var(--gold)}
+
+/* ── FOOTER ── */
+footer{background:#060F1E;padding:2rem 2rem 1rem;border-top:1px solid rgba(0,191,165,.15)}
+.fg2{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;margin-bottom:1.5rem}
+.fb2 .cn2{font-family:var(--fh);font-size:1.1rem;margin-bottom:.4rem}
+.fb2 p{color:var(--silver);font-size:.82rem;line-height:1.7;margin-bottom:.8rem}
+.fh2{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.8rem}
+.fls{list-style:none}
+.fls li{margin-bottom:.5rem}
+.fls a{color:var(--silver);text-decoration:none;font-size:.84rem;transition:color var(--t)}
+.fls a:hover{color:var(--teal)}
+.fbot{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);
+  padding-top:1.2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+.fbot p{color:var(--silver);font-size:.76rem}
+.freg{display:flex;align-items:center;gap:.5rem;background:rgba(255,215,0,.08);
+  border:1px solid rgba(255,215,0,.2);padding:.35rem .85rem;border-radius:20px}
+.freg span{color:var(--gold);font-size:.76rem;font-weight:600}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.rv.on{opacity:1;transform:none}
+.rl{opacity:0;transform:translateX(-28px);transition:opacity .65s ease,transform .65s ease}
+.rl.on{opacity:1;transform:none}
+.rr{opacity:0;transform:translateX(28px);transition:opacity .65s ease,transform .65s ease}
+.rr.on{opacity:1;transform:none}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--teal);color:var(--navy);
+  padding:.9rem 1.4rem;border-radius:12px;font-weight:700;font-size:.88rem;z-index:9999;
+  transform:translateY(100px);opacity:0;transition:all .4s ease;display:flex;align-items:center;gap:.5rem}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;
+    background:rgba(10,22,40,.98);padding:1.2rem 1.5rem;border-bottom:1px solid rgba(0,191,165,.2)}
+  .nav-links.open{display:flex}
+  .hbg{display:flex}
+  .btn-call{display:none}
+  .fg2{grid-template-columns:1fr;gap:1.5rem}
+  .fbot{flex-direction:column;text-align:center}
+}
+</style>
+
+<style>
+/* HERO */
+.hero{min-height:calc(100vh - 72px);display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:4rem 2rem;
+  background:linear-gradient(135deg,#0A1628,#0d1f3c 35%,#0f2744 65%,#0A1628);
+  position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(0,191,165,.13) 0%,transparent 70%);
+  pointer-events:none}
+.prt{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.p{position:absolute;background:var(--teal);border-radius:50%;animation:fl linear infinite}
+@keyframes fl{0%{transform:translateY(100vh) rotate(0deg);opacity:0}
+  10%{opacity:.35}90%{opacity:.35}100%{transform:translateY(-80px) rotate(720deg);opacity:0}}
+.hc{position:relative;z-index:1;max-width:820px}
+.hbdg{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,191,165,.15);
+  border:1px solid rgba(0,191,165,.4);padding:.38rem 1.1rem;border-radius:25px;
+  font-size:.78rem;color:var(--teal);font-weight:600;margin-bottom:1.4rem;letter-spacing:.05em}
+.hero h1{font-family:var(--fh);font-size:clamp(2rem,5vw,3.6rem);line-height:1.15;margin-bottom:1rem}
+.hsub{font-size:clamp(.88rem,2vw,1.07rem);color:var(--silver);max-width:620px;
+  margin:0 auto 2.2rem;line-height:1.75}
+.hbtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem}
+.bp{background:linear-gradient(135deg,var(--teal),var(--tg));color:var(--navy);
+  font-weight:700;padding:.85rem 2rem;border-radius:50px;text-decoration:none;
+  font-size:.97rem;transition:var(--t);display:flex;align-items:center;gap:.5rem}
+.bp:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,191,165,.4)}
+.bs{background:transparent;border:2px solid var(--teal);color:var(--teal);
+  font-weight:600;padding:.85rem 2rem;border-radius:50px;text-decoration:none;
+  font-size:.97rem;transition:var(--t);display:flex;align-items:center;gap:.5rem}
+.bs:hover{background:rgba(0,191,165,.1);transform:translateY(-3px)}
+.hreg{font-size:.78rem;color:var(--silver);opacity:.8}
+.hreg span{color:var(--gold);font-weight:600}
+
+/* STATS BAR */
+.stats{background:var(--dark);padding:2.5rem 2rem;
+  border-top:1px solid rgba(0,191,165,.15);border-bottom:1px solid rgba(0,191,165,.15)}
+.sg{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;text-align:center}
+.sn{font-family:var(--fh);font-size:2.3rem;color:var(--teal);font-weight:700;line-height:1}
+.sl{font-size:.78rem;color:var(--silver);margin-top:.35rem;font-weight:500}
+
+/* QUICK FEATURES */
+.features{background:var(--navy);padding:3.5rem 2rem}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+.feat-card{background:var(--card);border-radius:var(--r);padding:1.75rem 1.4rem;
+  border:1px solid rgba(255,255,255,.06);text-align:center;transition:transform var(--t),border-color var(--t)}
+.feat-card:hover{transform:translateY(-6px);border-color:rgba(0,191,165,.35)}
+.fi{font-size:2rem;margin-bottom:.9rem;display:block}
+.feat-card h3{font-size:.97rem;font-weight:700;margin-bottom:.4rem}
+.feat-card p{color:var(--silver);font-size:.83rem;line-height:1.6}
+.feat-card a{display:inline-flex;align-items:center;gap:.35rem;margin-top:1rem;
+  color:var(--teal);font-size:.82rem;font-weight:600;text-decoration:none;transition:gap var(--t)}
+.feat-card a:hover{gap:.65rem}
+
+@media(max-width:768px){
+  .sg{grid-template-columns:repeat(2,1fr)}
+  .feat-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){.feat-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="nb">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">&#x1F3E5;</div>
+      <div><div class="cn">Sri J.J.R. Physiotherapy</div>
+           <div class="ct">Dr. S. Gayathri | BPT, MPT (Ortho)</div></div>
+    </a>
+    <ul class="nav-links" id="nl"><li><a href="index.html" class="active">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="why.html">Why Us</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <a href="tel:9493791049" class="btn-call"><i class="fa fa-phone"></i> Call Now</a>
+    <div class="hbg" onclick="togMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="page-wrap">
+  <div class="page-content">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="prt" id="prt"></div>
+  <div class="hc rv">
+    <div class="hbdg"><i class="fa fa-certificate"></i> Reg. No. L-52781 | Certified Consultant Physiotherapist</div>
+    <h1>Expert <span class="tl">Physiotherapy</span><br>Care You Can Trust</h1>
+    <p class="hsub">Sri J.J.R. Physiotherapy Clinic provides evidence-based rehabilitation for neurological, orthopaedic, spinal and paediatric conditions under Dr. S. Gayathri&#39;s expert guidance in Marripalem, Visakhapatnam.</p>
+    <div class="hbtns">
+      <a href="contact.html" class="bp"><i class="fa fa-calendar-check"></i> Book Appointment</a>
+      <a href="tel:9493791049" class="bs"><i class="fa fa-phone"></i> Call: 9493791049</a>
+    </div>
+    <p class="hreg">&#x1F4CD; Marripalem, Visakhapatnam &nbsp;|&nbsp; <span>Reg. No: L-52781</span></p>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="sg">
+    <div class="rv"><div class="sn" data-t="15">0</div><div class="sl">Years Experience</div></div>
+    <div class="rv"><div class="sn" data-t="4">0</div><div class="sl">Speciality Areas</div></div>
+    <div class="rv"><div class="sn" data-t="500">0</div><div class="sl">Patients Treated</div></div>
+    <div class="rv"><div class="sn" data-t="100">0</div><div class="sl">Certified Care</div></div>
+  </div>
+</div>
+
+<!-- QUICK FEATURES -->
+<section class="features">
+  <div class="container">
+    <div class="tc rv">
+      <span class="stag">Welcome</span>
+      <h2 class="stit">Your Path to <span class="tl">Recovery</span> Starts Here</h2>
+      <p class="sdsc">Explore what Sri J.J.R. Physiotherapy Clinic has to offer across our specialist areas.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card rv">
+        <span class="fi">&#x1F9E0;</span>
+        <h3>Neurological Care</h3>
+        <p>Paralysis, Stroke, Parkinson&#39;s, Facial Palsy and more with expert neuro-rehabilitation.</p>
+        <a href="services.html">View Services <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="feat-card rv">
+        <span class="fi">&#x1F9B4;</span>
+        <h3>Orthopaedic &amp; Spinal</h3>
+        <p>Joint pain, frozen shoulder, disc problems, back pain and post-surgical recovery.</p>
+        <a href="services.html">View Services <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="feat-card rv">
+        <span class="fi">&#x1F476;</span>
+        <h3>Paediatric Physiotherapy</h3>
+        <p>Developmental delays, cerebral palsy and neuromuscular conditions in children.</p>
+        <a href="services.html">View Services <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="feat-card rv">
+        <span class="fi">&#x1F469;&#x200D;&#x2695;&#xFE0F;</span>
+        <h3>Meet Dr. Gayathri</h3>
+        <p>BPT, M.A.P, MPT (Ortho) — Consultant Physiotherapist with Reg. No. L-52781.</p>
+        <a href="about.html">About the Doctor <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="feat-card rv">
+        <span class="fi">&#x2705;</span>
+        <h3>Why Choose Us</h3>
+        <p>Evidence-based, personalized, licensed care that puts patients first every single time.</p>
+        <a href="why.html">Learn More <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="feat-card rv">
+        <span class="fi">&#x1F4CD;</span>
+        <h3>Book Appointment</h3>
+        <p>Call, WhatsApp or fill our form. Located at Marripalem, 7/10th Nagar, Visakhapatnam.</p>
+        <a href="contact.html">Contact Us <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){var c=document.getElementById("prt");for(var i=0;i<22;i++){var p=document.createElement("div");p.className="p";p.style.cssText="left:"+Math.random()*100+"%;width:"+(2+Math.random()*4)+"px;height:"+(2+Math.random()*4)+"px;animation-duration:"+(9+Math.random()*14)+"s;animation-delay:"+Math.random()*10+"s;opacity:"+(0.15+Math.random()*0.35);c.appendChild(p)}})();
+var co=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting&&!x.target.dataset.done){x.target.dataset.done="1";var t=parseInt(x.target.dataset.t);var s=t===100?"%":"+";var c=0,st=t/60;var ti=setInterval(function(){c+=st;if(c>=t){x.target.textContent=t+s;clearInterval(ti)}else x.target.textContent=Math.floor(c)+s},20)}})},{threshold:0.5});
+document.querySelectorAll(".sn").forEach(function(el){co.observe(el)});
+</script>
+  </div>
+  
+<footer>
+  <div class="fg2">
+    <div class="fb2">
+      <div class="cn2">&#x1F3E5; Sri J.J.R. Physiotherapy Clinic</div>
+      <p>Expert physiotherapy care under Dr. S. Gayathri, BPT, MPT (Ortho). Neurological, orthopaedic, spinal &amp; paediatric conditions, Marripalem, Visakhapatnam.</p>
+      <div class="freg"><i class="fa fa-certificate" style="color:var(--gold)"></i><span>Reg. No. L-52781</span></div>
+    </div>
+    <div>
+      <div class="fh2">Quick Links</div>
+      <ul class="fls">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Dr. Gayathri</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="why.html">Why Choose Us</a></li>
+        <li><a href="contact.html">Book Appointment</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fh2">Conditions</div>
+      <ul class="fls">
+        <li><a href="services.html">Neurological</a></li>
+        <li><a href="services.html">Orthopaedic</a></li>
+        <li><a href="services.html">Spinal</a></li>
+        <li><a href="services.html">Paediatric</a></li>
+        <li><a href="tel:9493791049">&#x1F4DE; 9493791049</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>&#169; 2024 Sri J.J.R. Physiotherapy Clinic | Dr. S. Gayathri | Marripalem, Visakhapatnam</p>
+    <div class="freg"><i class="fa fa-shield-alt" style="color:var(--gold)"></i><span>Reg. No. L-52781</span></div>
+  </div>
+</footer>
+</div>
+<div class="toast" id="toast">&#x2705; Message sent! We will contact you soon.</div>
+
+<script>
+window.addEventListener("scroll",function(){
+  var nb=document.getElementById("nb");
+  if(nb)nb.classList.toggle("scrolled",window.scrollY>30)
+});
+function togMenu(){document.getElementById("nl").classList.toggle("open")}
+document.querySelectorAll(".nav-links a").forEach(function(a){
+  a.addEventListener("click",function(){document.getElementById("nl").classList.remove("open")})
+});
+var ob=new IntersectionObserver(function(e){
+  e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("on")})
+},{threshold:0.08});
+document.querySelectorAll(".rv,.rl,.rr").forEach(function(el){ob.observe(el)});
+</script>
+
+</body>
+</html>
